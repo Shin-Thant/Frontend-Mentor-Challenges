@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-clr: rgb(31, 31, 100);
+    --secondary-clr: rgb(131, 151, 179);
+    --dark-blue: rgb(61, 26, 185);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(205, 237, 252);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    width: 350px;
+    height: 550px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+img {
+    width: 100%;
+}
+
+.main-section {
+    text-align: center;
+    padding: 1.5rem 1.8rem;
+}
+
+h2 {
+    color: var(--primary-clr);
+    margin-bottom: 1.2rem;
+}
+
+p {
+    color: var(--secondary-clr);
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.second {
+    flex: 1;
+    font-weight: bold;
+}
+
+.plan-name {
+    color: var(--primary-clr);
+}
+
+.price {
+    color: var(--secondary-clr);
+}
+
+.plan > a {
+    text-align: right;
+    flex: 1;
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.plan > a:active {
+    text-decoration: none;
+    color: rgb(106, 72, 230);
+}
+
+.btn {
+    background-color: var(--dark-blue);
+    font-weight: bold;
+    color: white;
+    padding: 0.8rem 0;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+
+.btn:hover {
+    background-color: rgba(60, 26, 185, 0.75);
+}
+
+.cancel {
+    color: var(--secondary-clr);
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cancel:active {
+    color: var(--dark-blue);
+}
