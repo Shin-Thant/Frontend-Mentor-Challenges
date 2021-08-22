@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiber / Sign In </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="signin-container">
+        <form class="signin-form">
+            <h5 class="mb-5">Fiber</h5>
+            <h2 class="mb-4">Create your Fiber account</h2>
+
+            <div class="form-box">
+                <label for="name">Your Name</label>
+                <div class="input-box">
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+            </div>
+            <div class="form-box">
+                <label for="email">E-Mail</label>
+                <div class="input-box">
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+            </div>
+            <div class="form-box">
+                <label for="pwd">Password</label>
+                <div class="input-box input-pwd">
+                    <input type="password" id="pwd" placeholder="At least 8 characters" required>
+                    <button class="eye-btn" type="button">
+                        <i class="fas fa-eye eye-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" required>
+                <span>
+                    By creating an account on Fiber, you agree to the 
+                    <a href="#">Terms & Conditions</a>
+                </span>
+            </div>
+
+            <button class="create-btn">Create Fiber Account</button>
+
+            <p class="text-center">
+                Already have an account?
+                <a href="#" class="signin-link">Sign In</a>
+            </p>
+        </form>
+
+        <div class="signin-img d-none d-md-block">
+            <img src="img/Sign Up Image.png" width="100%" alt="" class="mb-4">
+            <h2>Unparalled Templates</h2>
+            <p>
+                Created by a team of professional designers, our 
+                templates are enuparalled in the market.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const pwd = document.querySelector("#pwd");
+        const eye_Btn = document.querySelector(".eye-btn");
+        const eye_icon = document.querySelector(".eye-icon");
+
+        eye_Btn.addEventListener("click", function() {
+            const type = pwd.getAttribute('type') === 'password' ? 'text' : 'password';
+            pwd.setAttribute('type', type);
+
+            eye_icon.classList.toggle("fa-eye-slash");
+        })
+    </script>
+</body>
+</html>

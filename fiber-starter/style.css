@@ -11,6 +11,7 @@
     --tertiary-clr: rgb(117, 117, 117);
     --btn-padding: 0.8rem 1rem;
     --btn-weight: bold;
+    --btn-opacity: 0.84;
 }
 
 /* ----------------------------------------- For Section One */
@@ -34,6 +35,9 @@
     padding: 0.9rem 1.2rem;
     transform: translateY(-8px);
     border-radius: 10px;
+}
+.signup:hover {
+    opacity: var(--btn-opacity);
 }
 
 .intro {
@@ -78,6 +82,9 @@
     font-size: 18px;
     color: white;
     border-radius: 10px;
+}
+.free-trial-btn:hover {
+    opacity: var(--btn-opacity);
 }
 
 .view-example {
@@ -234,6 +241,103 @@ f-section {
     text-decoration: none;
 }
 
+/* --------------------------------------------- Sign In Form */
+.signin-container {
+    width: 100%;
+    display: flex;
+    --side-padding: 6rem 5.5rem
+}
+.signin-form, .signin-img {
+    flex: 1;
+}
+
+.input-pwd {
+    position: relative;
+}
+.input-pwd .eye-btn,
+.input-pwd .eye-btn {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    color: gray;
+    font-size: 17px;
+}
+
+.signin-form {
+    padding: var(--side-padding);
+    /* background-color: tomato; */
+}
+
+.form-box {
+    margin-bottom: 2rem;
+}
+
+.signin-form label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.input-box {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    width: 100%;
+}
+.input-box input {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    font-size: 17px;
+}
+
+.form-check {
+    margin-bottom: 1.5rem;
+}
+
+.form-check span {
+    font-size: 18px;
+}
+
+.form-check a {
+    color: var(--primary-clr);
+    font-weight: bold;
+}
+
+.create-btn {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 0.9rem 0;
+    border-radius: 10px;
+    background-color: var(--primary-clr);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.create-btn:hover {
+    opacity: var(--btn-opacity);
+}
+
+.signin-link {
+    color: var(--primary-clr);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signin-img {
+    padding: var(--side-padding);
+    color: white;
+    text-align: center;
+    background-color: var(--primary-clr);
+}
+.signin-img p {
+    color: lightgray;
+}
+
 /* ------------------------------------------- Media Quaries */
 
 @media (max-width: 1000px) {
@@ -288,5 +392,35 @@ f-section {
 @media (max-width: 992px) {
     .signin {
         margin-left: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .signin-form, .signin-img {
+        padding: 6rem 3rem;
+    }
+}
+
+@media (max-width: 970px) {
+    .signin-form, .signin-img {
+        padding: 5rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .signin-form {
+        padding: 4rem 6rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .signin-form {
+        padding: 3rem 2.5rem;
+    }
+}
+
+@media (max-width: 410px) {
+    .signin-form {
+        padding: 3rem 1.5rem;
     }
 }
